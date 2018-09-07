@@ -1,4 +1,4 @@
-FROM microsoft/azure-cli
+FROM microsoft/azure-cli:0.10.14
 
 RUN apt-get update; apt-get -y upgrade; apt-get clean
 

@@ -25,7 +25,7 @@ names_and_versions = matched_files.map do |f|
   { "filename" => f, "version" => version  }
 end
 
-names_and_versions.reject! { |h| h["version"].match(/[^0-9\.]/) }
+names_and_versions.reject! { |h| h["version"].match(/[^0-9\.]-\.+/) }
 names_and_versions.sort! { |a,b| Gem::Version.new(a["version"]) <=> Gem::Version.new(b["version"])  }
 
 if requested_path.nil?
